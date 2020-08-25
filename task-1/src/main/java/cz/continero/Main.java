@@ -1,7 +1,7 @@
 package cz.continero;
 
 
-import cz.continero.services.ContineroNumbers;
+import cz.continero.services.ContineroNumbersFactory;
 
 import java.util.Collections;
 import java.util.stream.IntStream;
@@ -15,6 +15,6 @@ public class Main {
 	}
 
 	public static void printContineroNumber(int value) {
-		System.out.println(ContineroNumbers.getService().numberToString(value));
+		System.out.println(ContineroNumbersFactory.get().numberToString(value));
 	}
 }

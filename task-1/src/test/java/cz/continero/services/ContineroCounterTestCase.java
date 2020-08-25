@@ -14,17 +14,17 @@ public class ContineroCounterTestCase {
 
 	@Test
 	public void divisibleBy3() {
-		Assertions.assertEquals("Software", ContineroNumbers.getService().numberToString(9), "9 is divisble by 3");
+		Assertions.assertEquals("Software", ContineroNumbersFactory.get().numberToString(9), "9 is divisble by 3");
 	}
 
 	@Test
 	public void divisibleBy5() {
-		Assertions.assertEquals("Agile", ContineroNumbers.getService().numberToString(25), "5 is divisble by 5");
+		Assertions.assertEquals("Agile", ContineroNumbersFactory.get().numberToString(25), "5 is divisble by 5");
 	}
 
 	@Test
 	public void divisibleBy3and5() {
-		Assertions.assertEquals("Testing", ContineroNumbers.getService().numberToString(45), "45 is divisble by 3 and 5");
+		Assertions.assertEquals("Testing", ContineroNumbersFactory.get().numberToString(45), "45 is divisble by 3 and 5");
 	}
 
 	@ParameterizedTest
@@ -44,7 +44,7 @@ public class ContineroCounterTestCase {
 		} else {
 			expected = String.valueOf(value);
 		}
-		Assertions.assertEquals(expected, ContineroNumbers.getService().numberToString(value));
+		Assertions.assertEquals(expected, ContineroNumbersFactory.get().numberToString(value));
 	}
 
 	private static Stream<Integer> getRange() {

@@ -5,15 +5,6 @@ import java.util.Objects;
 
 public class ContineroNumbersImpl implements ContineroNumbers {
 
-	private static ContineroNumbers INSTANCE = null;
-
-	public static ContineroNumbers getInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new ContineroNumbersImpl();
-		}
-		return INSTANCE;
-	}
-
 
 	ContineroNumbersImpl() {}
 
